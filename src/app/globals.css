@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-warm: #FAF7F2;
+    --paper-card: #FFFFFF;
+    --paper-card-subtle: #FDFBF7;
+    --text-primary: #2C1810;
+    --text-secondary: #6B5549;
+    --text-muted: #8C7567;
+    --accent-orange: #C85A17;
+    --accent-orange-hover: #AF4B0E;
+    --border-warm: #E6D8CA;
+    --border-warm-subtle: #F0E6DC;
+  }
+
+  body {
+    background-color: var(--bg-warm);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-image: 
+      radial-gradient(#E8DCCD 1px, transparent 1px);
+    background-size: 24px 24px;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  }
+}
+
+/* Custom Scrollbar for cozy literary feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4C3B2;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BF9F84;
+}
+
+/* Book spine and paper edge effects */
+.book-card-border {
+  border: 1px solid #EADBCC;
+  box-shadow: 0 4px 16px -2px rgba(44, 24, 16, 0.05), 0 2px 4px -1px rgba(44, 24, 16, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.book-card-border:hover {
+  border-color: #D3BFAB;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(44, 24, 16, 0.1), 0 4px 8px -2px rgba(44, 24, 16, 0.04);
+}
+
