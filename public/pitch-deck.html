@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookLoop Pitch Deck | Share a Book. Spread Knowledge.</title>
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAF7F2;
+      --card-bg: #FFFFFF;
+      --text: #2C1810;
+      --text-muted: #6B5549;
+      --accent: #C85A17;
+      --accent-hover: #AF4B0E;
+      --border: #EADBCC;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .header {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Merriweather', serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .badge {
+      background: #EFE6DD;
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid #D3BFAB;
+    }
+    .deck-container {
+      width: 100%;
+      max-width: 900px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(44, 24, 16, 0.08);
+      min-height: 520px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .slide { display: none; }
+    .slide.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    
+    h1 { font-family: 'Merriweather', serif; font-size: 38px; color: var(--text); margin-bottom: 12px; line-height: 1.2; }
+    h2 { font-family: 'Merriweather', serif; font-size: 28px; color: var(--text); margin-bottom: 16px; }
+    h3 { font-size: 18px; color: var(--accent); margin-bottom: 12px; font-weight: 600; }
+    p { font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 16px; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+    .card { background: #FAF7F2; border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+    .card h4 { font-family: 'Merriweather', serif; font-size: 18px; color: var(--text); margin-bottom: 8px; }
+    .card p { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+    
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--accent-hover); }
+    .btn-secondary {
+      background: #EFE6DD;
+      color: var(--text);
+    }
+    .btn-secondary:hover { background: #E4D7C8; }
+    .slide-num { font-size: 14px; color: var(--text-muted); font-weight: 500; }
+    .code { font-family: monospace; background: #EFE6DD; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+    ul { list-style: square; padding-left: 20px; color: var(--text-muted); }
+    ul li { margin-bottom: 8px; line-height: 1.6; font-size: 15px; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C85A17" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span>BookLoop</span>
+    </div>
+    <span class="badge">Official Pitch Deck</span>
+  </div>
+
+  <div class="deck-container">
+    <!-- Slide 1 -->
+    <div class="slide active" id="slide-1">
+      <span class="badge" style="margin-bottom: 16px; display: inline-block;">Decentralized Public Good</span>
+      <h1>BookLoop</h1>
+      <p style="font-size: 20px; color: var(--accent); font-family: 'Merriweather', serif; font-style: italic;">
+        "Every Book Deserves Another Reader."
+      </p>
+      <p>A zero-fee, tokenless public library protocol on Botchain Testnet (Chain ID 968) enabling communities to circulate physical literature transparently on-chain.</p>
+      <div class="card" style="margin-top: 24px;">
+        <p><strong>Smart Contract:</strong> <span class="code">0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0</span></p>
+        <p style="margin-top: 6px;"><strong>Network:</strong> Botchain Testnet (BohrScan Verified)</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="slide-2">
+      <h3>01. The Problem</h3>
+      <h2>Physical Books Are Trapped in Silence</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>Dormant Knowledge</h4>
+          <p>Over 2.5 billion physical books sit idle on shelves after a single read, slowly gathering dust.</p>
+        </div>
+        <div class="card">
+          <h4>Economic Barriers</h4>
+          <p>High retail book prices restrict access for students, researchers, and avid readers globally.</p>
+        </div>
+        <div class="card">
+          <h4>Centralized Fragility</h4>
+          <p>Centralized platforms exploit personal data, impose fees, or shut down when hosting costs mount.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="slide-3">
+      <h3>02. The Solution</h3>
+      <h2>The Open On-Chain Library Protocol</h2>
+      <ul>
+        <li><strong>Free & Tokenless:</strong> No platform tokens, no speculative NFTs, no paywalls.</li>
+        <li><strong>100% On-Chain Registry:</strong> Every listing, claim, and handover is permanently recorded on Botchain.</li>
+        <li><strong>Physical Provenance:</strong> View the complete historical journey of each book across readers.</li>
+        <li><strong>Warm Literary Experience:</strong> Built with warm beige, dark brown, and burnt orange hues designed for readers.</li>
+      </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" id="slide-4">
+      <h3>03. How It Works</h3>
+      <h2>Deterministic On-Chain State Lifecycle</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>1. List Book</h4>
+          <p>Owner lists book title, author, and genre. Status becomes <strong>Available</strong>.</p>
+        </div>
+        <div class="card">
+          <h4>2. Claim Book</h4>
+          <p>Another reader claims for free. Anti-self-claim and duplicate protection kick in. Status: <strong>Claimed</strong>.</p>
+        </div>
+        <div class="card">
+          <h4>3. Handover</h4>
+          <p>Upon physical exchange, the original owner confirms collection. Status: <strong>Collected</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide" id="slide-5">
+      <h3>04. Technical Architecture</h3>
+      <h2>Clean, Verified, Serverless Web3 Stack</h2>
+      <ul>
+        <li><strong>Solidity 0.8.20:</strong> Immutable <span class="code">BookLoop.sol</span> with 14/14 automated tests passing.</li>
+        <li><strong>Botchain Testnet (968):</strong> High throughput, sub-second finality, negligible gas fees.</li>
+        <li><strong>Next.js 14 App Router:</strong> Single-page responsive web app with wagmi & viem.</li>
+        <li><strong>Zero Backend:</strong> Zero central databases, zero single points of failure.</li>
+      </ul>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide" id="slide-6">
+      <h3>05. Impact & Vision</h3>
+      <h2>Proof of Knowledge In Circulation</h2>
+      <p>"When a book is shared rather than hoarded, a community forms. BookLoop uses blockchain not for financial speculation, but for trustless community coordination."</p>
+      <div class="card" style="margin-top: 24px;">
+        <h4>Join the Circulation</h4>
+        <p>GitHub: <a href="https://github.com/liljhnxn/bookloop" target="_blank" style="color: var(--accent);">github.com/liljhnxn/bookloop</a></p>
+        <p style="margin-top: 6px;">Explorer: <a href="https://scan.bohr.life/address/0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0#code" target="_blank" style="color: var(--accent);">scan.bohr.life</a></p>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-secondary" onclick="prevSlide()" id="prevBtn">Previous</button>
+      <span class="slide-num" id="slideIndicator">Slide 1 of 6</span>
+      <button class="btn" onclick="nextSlide()" id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 6;
+
+    function showSlide(n) {
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      const active = document.getElementById(`slide-${n}`);
+      if (active) active.classList.add('active');
+      document.getElementById('slideIndicator').innerText = `Slide ${n} of ${totalSlides}`;
+      document.getElementById('prevBtn').disabled = n === 1;
+      document.getElementById('nextBtn').innerText = n === totalSlides ? 'Restart' : 'Next';
+    }
+
+    function nextSlide() {
+      if (currentSlide === totalSlides) {
+        currentSlide = 1;
+      } else {
+        currentSlide++;
+      }
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>
