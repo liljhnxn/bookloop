@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useAccount, useConnect, useDisconnect, useSwitchChain, useChainId } from "wagmi";
 import { BookOpen, PlusCircle, Wallet, LogOut, Check, Copy, ExternalLink, AlertTriangle, Layers } from "lucide-react";
-import { botchain } from "@/config/wagmi";
+import { botchainMainnet } from "@/config/wagmi";
 import { EXPLORER_URL } from "@/config/contract";
 
 interface NavbarProps {
@@ -29,7 +29,7 @@ export function Navbar({
   const [copied, setCopied] = useState(false);
   const [walletDropdownOpen, setWalletDropdownOpen] = useState(false);
 
-  const isWrongNetwork = isConnected && chainId !== botchain.id;
+  const isWrongNetwork = isConnected && chainId !== botchainMainnet.id;
 
   const handleCopy = () => {
     if (address) {
@@ -64,7 +64,7 @@ export function Navbar({
               <div className="flex items-center space-x-2">
                 <span className="text-2xl font-bold font-serif tracking-tight text-[#2C1810]">BookLoop</span>
                 <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold bg-[#EFE6DD] text-[#6B5549] rounded-full border border-[#D3BFAB]">
-                  Botchain Testnet
+                  Botchain Mainnet (677)
                 </span>
               </div>
               <p className="text-xs text-[#6B5549] hidden md:block">
@@ -141,11 +141,11 @@ export function Navbar({
               </button>
             ) : isWrongNetwork ? (
               <button
-                onClick={() => switchChain({ chainId: botchain.id })}
+                onClick={() => switchChain({ chainId: botchainMainnet.id })}
                 className="inline-flex items-center space-x-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300 hover:bg-amber-200 transition-colors cursor-pointer"
               >
                 <AlertTriangle className="w-4 h-4 text-amber-600" />
-                <span>Switch to Botchain (968)</span>
+                <span>Switch to Botchain (677)</span>
               </button>
             ) : (
               <div className="relative">

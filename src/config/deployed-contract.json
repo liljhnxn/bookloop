@@ -1,7 +1,6 @@
 {
-  "address": "0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0",
-  "network": "botchain",
-  "chainId": "968",
-  "deployedAt": "2026-11-06T11:42:52.000Z"
+  "address": "0x83963800D206199e472816CCA3Fa8d5bA4C9E751",
+  "network": "botchainMainnet",
+  "chainId": "677",
+  "deployedAt": "2026-11-12T09:08:43.614Z"
 }
-

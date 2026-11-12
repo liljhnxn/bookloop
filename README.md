@@ -4,7 +4,7 @@
 >
 > *"Every Book Deserves Another Reader."*
 
-BookLoop is a decentralized, peer-to-peer book-sharing web application built on **Botchain Testnet**. It enables book lovers to give away physical books they have read, discover books listed by others, and claim them freely without tokens, NFTs, or subscription fees. Every book listing, claim, and collection confirmation is recorded immutably on-chain.
+BookLoop is a decentralized, peer-to-peer book-sharing web application built on **Botchain Mainnet** (Chain ID: 677). It enables book lovers to give away physical books they have read, discover books listed by others, and claim them freely without tokens, NFTs, or subscription fees. Every book listing, claim, and collection confirmation is recorded immutably on-chain.
 
 ---
 
@@ -28,15 +28,16 @@ BookLoop is a decentralized, peer-to-peer book-sharing web application built on 
 
 ---
 
-## 🌐 Network Information: Botchain Testnet
+## 🌐 Network Information: Botchain Mainnet
 
 | Parameter | Value |
 | :--- | :--- |
-| **Network Name** | Botchain Testnet |
-| **Chain ID** | `968` |
-| **Currency Symbol** | `BOHR` |
-| **RPC Endpoint** | `https://rpc.bohr.life` |
-| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
+| **Network Name** | Botchain Mainnet |
+| **Chain ID** | `677` |
+| **Currency Symbol** | `BOT` |
+| **RPC Endpoint** | `https://rpc.botchain.ai` |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
+| **Contract Address** | [`0x83963800D206199e472816CCA3Fa8d5bA4C9E751`](https://scan.botchain.ai/address/0x83963800D206199e472816CCA3Fa8d5bA4C9E751#code) |
 
 ---
 

@@ -81,7 +81,7 @@ export function CreateListingModal({
               List a Book for Giving
             </h2>
             <p className="text-xs text-[#6B5549]">
-              Every book listed is saved permanently on Botchain Testnet.
+              Every book listed is saved permanently on Botchain Mainnet.
             </p>
           </div>
         </div>

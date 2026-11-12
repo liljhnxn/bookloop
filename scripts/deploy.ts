@@ -10,14 +10,26 @@ async function main() {
 
   if (deployer) {
     const balance = await ethers.provider.getBalance(deployer.address);
-    console.log("Account balance:", ethers.formatEther(balance), "ETH/BOHR");
+    const feeData = await ethers.provider.getFeeData();
+    console.log("Account balance:", ethers.formatEther(balance), "BOT");
+    console.log("Network gas price:", feeData.gasPrice ? ethers.formatUnits(feeData.gasPrice, "gwei") + " gwei" : "standard");
   }
 
   const BookLoop = await ethers.getContractFactory("BookLoop");
+  console.log("Broadcasting deployment transaction...");
   const bookLoop = await BookLoop.deploy();
 
   await bookLoop.waitForDeployment();
   const address = await bookLoop.getAddress();
+
+  const deployReceipt = await bookLoop.deploymentTransaction()?.wait();
+  if (deployReceipt) {
+    const gasUsed = deployReceipt.gasUsed;
+    const gasPrice = deployReceipt.gasPrice || 0n;
+    const totalCost = gasUsed * gasPrice;
+    console.log("Gas used:", gasUsed.toString());
+    console.log("Deployment fee paid:", ethers.formatEther(totalCost), "BOT");
+  }
 
   console.log("✅ BookLoop deployed successfully to:", address);
   console.log("Network:", (await ethers.provider.getNetwork()).name, "(chainId:", (await ethers.provider.getNetwork()).chainId.toString() + ")");

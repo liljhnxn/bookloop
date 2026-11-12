@@ -98,7 +98,7 @@ export function Hero({
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <div className="text-lg sm:text-xl font-bold font-mono text-[#2C1810]">
-                Botchain 968
+                Botchain 677
               </div>
               <p className="text-xs font-medium text-[#8C7567] mt-0.5">
                 100% On-Chain Records

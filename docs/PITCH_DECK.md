@@ -7,8 +7,9 @@
 **Title:** BookLoop  
 **Subtitle:** A Decentralized Public Library Protocol  
 **Tagline:** "Every Book Deserves Another Reader."  
-**Network:** Botchain Testnet (Chain ID 968)  
-**Contract:** `0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0` (Verified on BohrScan)  
+**Network:** Botchain Mainnet (Chain ID 677)  
+**Native Currency:** BOT  
+**Contract:** `0x83963800D206199e472816CCA3Fa8d5bA4C9E751` (Verified on BotchainScan)  
 **Website:** [bookloop.life](https://github.com/liljhnxn/bookloop)  
 
 *Speaker Notes:*  
@@ -97,7 +98,9 @@ BookLoop demonstrates that Web3's highest purpose is coordinating people around 
 ---
 
 ## Slide 10: Get Involved & Connect
-- **Live Contract**: `0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0`
-- **Block Explorer**: [scan.bohr.life/address/0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0](https://scan.bohr.life/address/0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0#code)
+- **Live Contract**: `0x83963800D206199e472816CCA3Fa8d5bA4C9E751`
+- **Block Explorer**: [scan.botchain.ai/address/0x83963800D206199e472816CCA3Fa8d5bA4C9E751](https://scan.botchain.ai/address/0x83963800D206199e472816CCA3Fa8d5bA4C9E751#code)
+- **Network**: Botchain Mainnet (Chain ID 677, BOT)
 - **GitHub Repository**: [github.com/liljhnxn/bookloop](https://github.com/liljhnxn/bookloop)
 - **Tagline**: Share a Book. Spread Knowledge.
+

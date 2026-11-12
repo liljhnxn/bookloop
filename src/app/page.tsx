@@ -168,7 +168,7 @@ export default function Home() {
       addToast(
         "pending",
         "Listing Submitted",
-        "Writing listing to Botchain Testnet...",
+        "Writing listing to Botchain Mainnet...",
         hash
       );
       setIsCreateModalOpen(false);
@@ -546,7 +546,7 @@ export default function Home() {
             <span>BookLoop — Share a Book. Spread Knowledge.</span>
           </div>
           <p className="text-[11px] text-[#8C7567]">
-            Decentralized book-sharing on Botchain Testnet (Chain ID 968) • No tokens, no fees, 100% peer-to-peer.
+            Decentralized book-sharing on Botchain Mainnet (Chain ID 677) • Native Token: BOT • No fees, 100% peer-to-peer.
           </p>
           <div className="pt-2 flex items-center justify-center space-x-4 text-[11px]">
             <a
@@ -555,11 +555,11 @@ export default function Home() {
               rel="noreferrer"
               className="hover:text-[#C85A17] transition-colors"
             >
-              BohrScan Explorer
+              BotchainScan Explorer
             </a>
             <span>•</span>
             <span className="font-mono text-[#8C7567]">
-              RPC: https://rpc.bohr.life
+              RPC: https://rpc.botchain.ai
             </span>
           </div>
         </div>

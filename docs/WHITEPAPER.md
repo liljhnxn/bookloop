@@ -2,9 +2,10 @@
 ### *A Decentralized Peer-to-Peer Protocol for Physical Book Circulation*
 
 **Version:** 1.0.0  
-**Network:** Botchain Testnet (Chain ID: 968)  
-**Smart Contract:** `0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0`  
-**Explorer:** [https://scan.bohr.life/address/0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0#code](https://scan.bohr.life/address/0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0#code)  
+**Network:** Botchain Mainnet (Chain ID: 677)  
+**Native Currency:** BOT  
+**Smart Contract:** `0x83963800D206199e472816CCA3Fa8d5bA4C9E751`  
+**Explorer:** [https://scan.botchain.ai/address/0x83963800D206199e472816CCA3Fa8d5bA4C9E751#code](https://scan.botchain.ai/address/0x83963800D206199e472816CCA3Fa8d5bA4C9E751#code)  
 **Source Code:** [https://github.com/liljhnxn/bookloop](https://github.com/liljhnxn/bookloop)  
 **Tagline:** *"Share a Book. Spread Knowledge."*
 
@@ -130,3 +131,4 @@ BookLoop rejects artificial tokenization. Knowledge is a public good, and physic
 ## 8. Conclusion
 
 BookLoop proves that blockchain technology's greatest utility lies not in financial speculation, but in verifiable coordination for the common good. By joining on-chain immutability with physical book lending, BookLoop ensures that every book receives another reader.
+
