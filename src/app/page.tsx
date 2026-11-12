@@ -313,24 +313,6 @@ export default function Home() {
         myClaimsCount={myClaims.length}
       />
 
-      {/* Contract configuration banner if not deployed */}
-      {isContractNotSet && (
-        <div className="bg-amber-100 border-b border-amber-300 px-4 py-3 text-amber-950 text-xs sm:text-sm">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Info className="w-4 h-4 text-amber-700 flex-shrink-0" />
-              <span>
-                <strong>Smart Contract Not Yet Deployed:</strong> Deploy BookLoop to Botchain Mainnet using{" "}
-                <code className="bg-amber-200/80 px-1.5 py-0.5 rounded font-mono text-xs">
-                  npm run deploy:mainnet
-                </code>{" "}
-                and configure <code className="bg-amber-200/80 px-1.5 py-0.5 rounded font-mono text-xs">NEXT_PUBLIC_CONTRACT_ADDRESS</code>.
-              </span>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Hero Section */}
       <Hero
         totalBooksListed={totalListedData ? Number(totalListedData) : books.length}
@@ -545,9 +527,11 @@ export default function Home() {
           {/* BOT Chain Ecosystem Card */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#EADBCC] shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#2C1810] text-[#FAF7F2] flex items-center justify-center font-bold text-lg shadow-sm border border-[#E6D8CA]">
-                <span className="text-[#C85A17] font-serif">B</span>OT
-              </div>
+              <img
+                src="/botchain-logo.png"
+                alt="BOT Chain Logo"
+                className="w-14 h-14 rounded-2xl object-cover shadow-sm border border-[#E6D8CA]"
+              />
               <div>
                 <div className="flex items-center space-x-2">
                   <h4 className="text-base font-bold font-serif text-[#2C1810]">
@@ -563,14 +547,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Official Ecosystem Links */}
+            {/* Official Ecosystem Links with Logo at the Front */}
             <div className="flex flex-wrap items-center gap-3">
               <a
                 href="https://botchain.ai"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#FAF7F2] hover:bg-[#EFE6DD] text-[#2C1810] border border-[#D3BFAB] transition-all shadow-sm"
+                className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-[#FAF7F2] hover:bg-[#EFE6DD] text-[#2C1810] border border-[#D3BFAB] transition-all shadow-sm group"
               >
+                <img
+                  src="/botchain-logo.png"
+                  alt="BOT Chain Logo"
+                  className="w-4 h-4 rounded-md object-cover flex-shrink-0 group-hover:scale-110 transition-transform"
+                />
                 <span>BOT Chain website</span>
                 <span className="text-[#C85A17]">↗</span>
               </a>
@@ -578,8 +567,13 @@ export default function Home() {
                 href="https://scan.botchain.ai"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#2C1810] hover:bg-[#42281D] text-[#FAF7F2] transition-all shadow-sm"
+                className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-[#2C1810] hover:bg-[#42281D] text-[#FAF7F2] transition-all shadow-sm group"
               >
+                <img
+                  src="/botchain-logo.png"
+                  alt="BOT Chain Logo"
+                  className="w-4 h-4 rounded-md object-cover flex-shrink-0 group-hover:scale-110 transition-transform"
+                />
                 <span>BOT Chain explorer</span>
                 <span className="text-[#C85A17]">↗</span>
               </a>
@@ -599,16 +593,16 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:items-end text-[11px] text-[#8C7567]">
-              <span>
-                Contract:{" "}
+              <span className="flex items-center space-x-1.5">
+                <span>Mainnet Contract:</span>
                 <a
                   href={`https://scan.botchain.ai/address/${BOOKLOOP_ADDRESS}#code`}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-mono text-[#C85A17] hover:underline"
+                  className="font-mono text-[#C85A17] hover:underline font-semibold"
                   title="View Verified Contract on BOT Chain Explorer"
                 >
-                  {BOOKLOOP_ADDRESS.slice(0, 8)}...{BOOKLOOP_ADDRESS.slice(-6)}
+                  {BOOKLOOP_ADDRESS}
                 </a>
               </span>
               <span className="mt-0.5 font-mono">RPC: https://rpc.botchain.ai</span>

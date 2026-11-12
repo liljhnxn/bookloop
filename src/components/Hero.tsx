@@ -94,14 +94,14 @@ export function Hero({
 
             {/* Counter 3: Botchain Verified */}
             <div className="col-span-2 md:col-span-1 bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-[#EADBCC] shadow-sm text-center">
-              <div className="w-9 h-9 mx-auto mb-2 rounded-xl bg-[#FAF7F2] flex items-center justify-center text-emerald-700 border border-[#E6D8CA]">
-                <ShieldCheck className="w-4 h-4" />
+              <div className="w-9 h-9 mx-auto mb-2 rounded-xl overflow-hidden border border-[#E6D8CA] bg-black">
+                <img src="/botchain-logo.png" alt="BOT Chain" className="w-full h-full object-cover" />
               </div>
               <div className="text-lg sm:text-xl font-bold font-mono text-[#2C1810]">
-                Botchain 677
+                BOT Chain 677
               </div>
               <p className="text-xs font-medium text-[#8C7567] mt-0.5">
-                100% On-Chain Records
+                Mainnet On-Chain Records
               </p>
             </div>
 

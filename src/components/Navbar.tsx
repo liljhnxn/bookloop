@@ -63,9 +63,10 @@ export function Navbar({
             <div>
               <div className="flex items-center space-x-2">
                 <span className="text-2xl font-bold font-serif tracking-tight text-[#2C1810]">BookLoop</span>
-                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold bg-[#EFE6DD] text-[#6B5549] rounded-full border border-[#D3BFAB]">
-                  Botchain Mainnet (677)
-                </span>
+                <div className="hidden sm:inline-flex items-center space-x-1.5 px-2.5 py-0.5 text-[10px] font-semibold bg-[#EFE6DD] text-[#2C1810] rounded-full border border-[#D3BFAB]">
+                  <img src="/botchain-logo.png" alt="BOT Chain" className="w-3.5 h-3.5 rounded-full object-cover" />
+                  <span>BOT Chain Mainnet (677)</span>
+                </div>
               </div>
               <p className="text-xs text-[#6B5549] hidden md:block">
                 Share a Book. Spread Knowledge.
@@ -144,8 +145,8 @@ export function Navbar({
                 onClick={() => switchChain({ chainId: botchainMainnet.id })}
                 className="inline-flex items-center space-x-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300 hover:bg-amber-200 transition-colors cursor-pointer"
               >
-                <AlertTriangle className="w-4 h-4 text-amber-600" />
-                <span>Switch to Botchain (677)</span>
+                <img src="/botchain-logo.png" alt="BOT Chain" className="w-3.5 h-3.5 rounded-full object-cover" />
+                <span>Switch to BOT Chain (677)</span>
               </button>
             ) : (
               <div className="relative">

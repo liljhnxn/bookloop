@@ -235,4 +235,3 @@ export const BOOKLOOP_ABI = [
     type: "event",
   },
 ] as const;
-
