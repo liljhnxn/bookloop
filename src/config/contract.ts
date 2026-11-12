@@ -1,7 +1,8 @@
 export const BOOKLOOP_ADDRESS = (process.env.NEXT_PUBLIC_CONTRACT_ADDRESS ||
-  "0x0000000000000000000000000000000000000000") as `0x${string}`;
+  "0x83963800D206199e472816CCA3Fa8d5bA4C9E751") as `0x${string}`;
 
-export const EXPLORER_URL = process.env.NEXT_PUBLIC_EXPLORER_URL || "https://scan.botchain.ai";
+export const EXPLORER_URL = "https://scan.botchain.ai";
+export const BOTCHAIN_WEBSITE_URL = "https://botchain.ai";
 
 export const BOOKLOOP_ABI = [
   {

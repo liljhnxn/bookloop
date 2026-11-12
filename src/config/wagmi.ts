@@ -4,7 +4,7 @@ import { injected } from "wagmi/connectors";
 
 export const botchainMainnet = defineChain({
   id: 677,
-  name: "Botchain Mainnet",
+  name: "BOT Chain",
   nativeCurrency: {
     decimals: 18,
     name: "Botchain",
@@ -26,31 +26,6 @@ export const botchainMainnet = defineChain({
   },
 });
 
-export const botchain = defineChain({
-  id: 968,
-  name: "Botchain Testnet",
-  nativeCurrency: {
-    decimals: 18,
-    name: "Bohr",
-    symbol: "BOHR",
-  },
-  rpcUrls: {
-    default: {
-      http: ["https://rpc.bohr.life"],
-    },
-    public: {
-      http: ["https://rpc.bohr.life"],
-    },
-  },
-  blockExplorers: {
-    default: {
-      name: "BohrScan",
-      url: "https://scan.bohr.life",
-    },
-  },
-  testnet: true,
-});
-
 export const hardhatLocal = defineChain({
   id: 31337,
   name: "Hardhat Localhost",
@@ -64,17 +39,15 @@ export const hardhatLocal = defineChain({
       http: ["http://127.0.0.1:8545"],
     },
   },
-  testnet: true,
 });
 
 export const config = createConfig({
-  chains: [botchainMainnet, botchain, hardhatLocal],
+  chains: [botchainMainnet, hardhatLocal],
   connectors: [
     injected(),
   ],
   transports: {
     [botchainMainnet.id]: http("https://rpc.botchain.ai"),
-    [botchain.id]: http("https://rpc.bohr.life"),
     [hardhatLocal.id]: http("http://127.0.0.1:8545"),
   },
   ssr: true,

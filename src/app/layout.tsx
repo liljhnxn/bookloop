@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 export const metadata: Metadata = {
   title: "BookLoop | Share a Book. Spread Knowledge.",
   description:
-    "A decentralized book-sharing platform on Botchain Testnet. List books to give away and claim books from fellow readers.",
+    "A decentralized book-sharing platform on Botchain Mainnet. List books to give away and claim books from fellow readers.",
   keywords: ["BookLoop", "Web3 Books", "Botchain", "Book Sharing", "Decentralized Library"],
   icons: {
     icon: "/icon.svg",

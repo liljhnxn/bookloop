@@ -66,7 +66,7 @@ export function NotificationToast({ toasts, onDismiss }: NotificationToastProps)
                   rel="noreferrer"
                   className="inline-flex items-center space-x-1 text-xs text-[#C85A17] hover:underline font-mono mt-1.5"
                 >
-                  <span>View on BohrScan</span>
+                  <span>View on BotchainScan</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               )}

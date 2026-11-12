@@ -24,20 +24,21 @@ BookLoop is a decentralized, peer-to-peer book-sharing web application built on 
   - Filter by category/genre and status (Available, Claimed, Collected).
   - Dedicated personal tabs for "My Listings" and "My Claimed Books".
   - Interactive modals for book creation and full provenance details.
-  - Live MetaMask integration with automatic Botchain Testnet detection and transaction toast notifications.
+  - Live MetaMask integration with automatic BOT Chain Mainnet detection and transaction toast notifications.
 
 ---
 
-## 🌐 Network Information: Botchain Mainnet
+## 🌐 Network Information: BOT Chain Mainnet
 
 | Parameter | Value |
 | :--- | :--- |
-| **Network Name** | Botchain Mainnet |
+| **Network Name** | BOT Chain Mainnet |
 | **Chain ID** | `677` |
 | **Currency Symbol** | `BOT` |
-| **RPC Endpoint** | `https://rpc.botchain.ai` |
-| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
+| **BOT Chain Website** | [https://botchain.ai](https://botchain.ai) |
+| **BOT Chain Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
 | **Contract Address** | [`0x83963800D206199e472816CCA3Fa8d5bA4C9E751`](https://scan.botchain.ai/address/0x83963800D206199e472816CCA3Fa8d5bA4C9E751#code) |
+| **RPC Endpoint** | `https://rpc.botchain.ai` |
 
 ---
 
@@ -62,7 +63,7 @@ BookLoop/
 ├── test/
 │   └── BookLoop.test.ts        # Comprehensive Hardhat unit tests (14 passing tests)
 ├── scripts/
-│   └── deploy.ts               # Deployment script for Botchain Testnet
+│   └── deploy.ts               # Deployment script for BOT Chain Mainnet
 ├── src/
 │   ├── app/
 │   │   ├── globals.css         # Cozy literary theme styling & paper card borders
@@ -78,11 +79,11 @@ BookLoop/
 │   │   └── NotificationToast.tsx# On-chain transaction status toasts
 │   ├── config/
 │   │   ├── contract.ts         # Contract ABI & address configuration
-│   │   └── wagmi.ts            # Wagmi client and Botchain chain definition
+│   │   └── wagmi.ts            # Wagmi client and BOT Chain definition
 │   └── types/
 │       └── book.ts             # TypeScript definitions and categories
 ├── .env.example                # Environment variables template
-├── hardhat.config.ts           # Hardhat configuration (local & Botchain testnet)
+├── hardhat.config.ts           # Hardhat configuration (local & BOT Chain Mainnet)
 ├── package.json
 ├── tailwind.config.ts
 └── tsconfig.json
@@ -103,7 +104,7 @@ Run the automated test suite verifying all 14 contract requirements:
 npm test
 ```
 
-### 3. Deploy Contract to Botchain Testnet
+### 3. Deploy Contract to BOT Chain Mainnet
 1. Create a `.env` file from `.env.example`:
    ```bash
    cp .env.example .env
@@ -111,15 +112,15 @@ npm test
 2. Add your deployer wallet's private key:
    ```env
    PRIVATE_KEY=your_private_key_here
-   BOTCHAIN_RPC_URL=https://rpc.bohr.life
+   BOTCHAIN_MAINNET_RPC_URL=https://rpc.botchain.ai
    ```
 3. Run the deployment script:
    ```bash
-   npm run deploy:botchain
+   npm run deploy:mainnet
    ```
 4. Copy the printed contract address into your `.env`:
    ```env
-   NEXT_PUBLIC_CONTRACT_ADDRESS=0xYourDeployedContractAddress
+   NEXT_PUBLIC_CONTRACT_ADDRESS=0x83963800D206199e472816CCA3Fa8d5bA4C9E751
    ```
 
 ### 4. Run Frontend Locally

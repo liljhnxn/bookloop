@@ -320,9 +320,9 @@ export default function Home() {
             <div className="flex items-center space-x-2">
               <Info className="w-4 h-4 text-amber-700 flex-shrink-0" />
               <span>
-                <strong>Smart Contract Not Yet Deployed:</strong> Deploy BookLoop to Botchain Testnet using{" "}
+                <strong>Smart Contract Not Yet Deployed:</strong> Deploy BookLoop to Botchain Mainnet using{" "}
                 <code className="bg-amber-200/80 px-1.5 py-0.5 rounded font-mono text-xs">
-                  npm run deploy:botchain
+                  npm run deploy:mainnet
                 </code>{" "}
                 and configure <code className="bg-amber-200/80 px-1.5 py-0.5 rounded font-mono text-xs">NEXT_PUBLIC_CONTRACT_ADDRESS</code>.
               </span>
@@ -469,7 +469,7 @@ export default function Home() {
           <div className="py-20 text-center">
             <div className="w-10 h-10 border-2 border-[#C85A17] border-t-transparent rounded-full animate-spin mx-auto mb-4" />
             <p className="text-sm font-medium text-[#6B5549]">
-              Reading book catalog directly from Botchain Testnet...
+              Reading book catalog directly from Botchain Mainnet...
             </p>
           </div>
         ) : displayedBooks.length === 0 ? (
@@ -538,30 +538,83 @@ export default function Home() {
 
       </main>
 
-      {/* Footer */}
-      <footer className="mt-20 border-t border-[#E6D8CA] bg-[#FAF7F2] py-8 text-center text-xs text-[#6B5549]">
-        <div className="max-w-7xl mx-auto px-4 space-y-2">
-          <div className="flex items-center justify-center space-x-2 font-serif text-sm font-semibold text-[#2C1810]">
-            <BookOpen className="w-4 h-4 text-[#C85A17]" />
-            <span>BookLoop — Share a Book. Spread Knowledge.</span>
+      {/* Footer & Ecosystem Section */}
+      <footer className="mt-20 border-t border-[#E6D8CA] bg-[#FAF7F2] py-12 text-xs text-[#6B5549]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          
+          {/* BOT Chain Ecosystem Card */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#EADBCC] shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#2C1810] text-[#FAF7F2] flex items-center justify-center font-bold text-lg shadow-sm border border-[#E6D8CA]">
+                <span className="text-[#C85A17] font-serif">B</span>OT
+              </div>
+              <div>
+                <div className="flex items-center space-x-2">
+                  <h4 className="text-base font-bold font-serif text-[#2C1810]">
+                    Powered by BOT Chain
+                  </h4>
+                  <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                    Mainnet (Chain ID 677)
+                  </span>
+                </div>
+                <p className="text-xs text-[#8C7567] mt-0.5 max-w-md">
+                  BookLoop leverages BOT Chain's high-speed, low-cost decentralized infrastructure to circulate physical literature transparently on-chain.
+                </p>
+              </div>
+            </div>
+
+            {/* Official Ecosystem Links */}
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://botchain.ai"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#FAF7F2] hover:bg-[#EFE6DD] text-[#2C1810] border border-[#D3BFAB] transition-all shadow-sm"
+              >
+                <span>BOT Chain website</span>
+                <span className="text-[#C85A17]">↗</span>
+              </a>
+              <a
+                href="https://scan.botchain.ai"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#2C1810] hover:bg-[#42281D] text-[#FAF7F2] transition-all shadow-sm"
+              >
+                <span>BOT Chain explorer</span>
+                <span className="text-[#C85A17]">↗</span>
+              </a>
+            </div>
           </div>
-          <p className="text-[11px] text-[#8C7567]">
-            Decentralized book-sharing on Botchain Mainnet (Chain ID 677) • Native Token: BOT • No fees, 100% peer-to-peer.
-          </p>
-          <div className="pt-2 flex items-center justify-center space-x-4 text-[11px]">
-            <a
-              href={EXPLORER_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-[#C85A17] transition-colors"
-            >
-              BotchainScan Explorer
-            </a>
-            <span>•</span>
-            <span className="font-mono text-[#8C7567]">
-              RPC: https://rpc.botchain.ai
-            </span>
+
+          {/* Bottom Row */}
+          <div className="pt-4 border-t border-[#F0E6DC] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+              <div className="flex items-center justify-center sm:justify-start space-x-2 font-serif text-sm font-semibold text-[#2C1810]">
+                <BookOpen className="w-4 h-4 text-[#C85A17]" />
+                <span>BookLoop — Share a Book. Spread Knowledge.</span>
+              </div>
+              <p className="text-[11px] text-[#8C7567] mt-1">
+                Decentralized physical book sharing protocol • Native Token: BOT • No tokens, no fees, 100% peer-to-peer.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:items-end text-[11px] text-[#8C7567]">
+              <span>
+                Contract:{" "}
+                <a
+                  href={`https://scan.botchain.ai/address/${BOOKLOOP_ADDRESS}#code`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-mono text-[#C85A17] hover:underline"
+                  title="View Verified Contract on BOT Chain Explorer"
+                >
+                  {BOOKLOOP_ADDRESS.slice(0, 8)}...{BOOKLOOP_ADDRESS.slice(-6)}
+                </a>
+              </span>
+              <span className="mt-0.5 font-mono">RPC: https://rpc.botchain.ai</span>
+            </div>
           </div>
+
         </div>
       </footer>
 

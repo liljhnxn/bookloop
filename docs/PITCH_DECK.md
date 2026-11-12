@@ -61,25 +61,27 @@
 - **Explore & Filter**: Instant search across titles and authors with genre tags (Fiction, Philosophy, Tech, History).
 - **Live On-Chain Stats**: Real-time counter of total books listed and books successfully shared.
 - **Personal Dashboard**: Dedicated tabs for *"My Listings"* and *"My Claimed Books"*.
-- **Direct MetaMask Integration**: One-click wallet connect with chain detection and BohrScan transaction toasts.
+- **Direct MetaMask Integration**: One-click wallet connect with chain detection and BotchainScan transaction toasts.
 
 ---
 
 ## Slide 6: Technology Architecture
 ### Robust, Lightweight, and Verified
 - **Smart Contract**: Solidity `0.8.20` with optimizer enabled (Paris EVM).
-- **Deployment**: Deployed & verified on **Botchain Testnet (Chain ID 968)**.
+- **Deployment**: Deployed & verified on **BOT Chain Mainnet (Chain ID 677)**.
 - **Frontend**: Next.js 14 App Router, TypeScript, Tailwind CSS, Wagmi v2, Viem.
 - **Zero Backend**: Reads and writes executed directly against the Botchain RPC.
 - **Testing**: 14/14 automated Hardhat unit tests passing with 100% test coverage of all edge cases.
 
 ---
 
-## Slide 7: Why Botchain?
+## Slide 7: Why BOT Chain?
 - **High Throughput & Rapid Finality**: Real-world handovers require near-instant transaction feedback.
-- **Negligible Gas Costs**: Sharing books remains practically free.
+- **Negligible Gas Costs**: Sharing books remains practically free (deployment cost < 0.04 BOT).
 - **EVM Compatibility**: Works out-of-the-box with MetaMask, Rainbow, Coinbase Wallet, and any standard Web3 wallet.
-- **Transparent Explorer**: Full code verification and provenance tracking via BohrScan.
+- **Official Ecosystem**:
+  - Website: [https://botchain.ai](https://botchain.ai)
+  - Explorer: [https://scan.botchain.ai](https://scan.botchain.ai)
 
 ---
 

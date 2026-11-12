@@ -157,7 +157,7 @@ export function BookDetailsModal({
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#8C7567] hover:text-[#C85A17]"
-                  title="View on BohrScan"
+                  title="View on BotchainScan"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
@@ -184,7 +184,7 @@ export function BookDetailsModal({
                       target="_blank"
                       rel="noreferrer"
                       className="text-[#8C7567] hover:text-[#C85A17]"
-                      title="View on BohrScan"
+                      title="View on BotchainScan"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>

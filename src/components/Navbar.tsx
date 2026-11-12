@@ -183,7 +183,7 @@ export function Navbar({
                         className="w-full flex items-center space-x-2 px-3 py-2 rounded-lg text-xs text-[#6B5549] hover:bg-[#FAF7F2] hover:text-[#2C1810]"
                       >
                         <ExternalLink className="w-3.5 h-3.5" />
-                        <span>View on BohrScan</span>
+                        <span>View on BotchainScan</span>
                       </a>
                     </div>
 

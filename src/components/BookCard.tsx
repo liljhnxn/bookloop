@@ -123,7 +123,7 @@ export function BookCard({
                 href={`${EXPLORER_URL}/address/${book.owner}`}
                 target="_blank"
                 rel="noreferrer"
-                title="View on BohrScan"
+                title="View on BotchainScan"
                 className="text-[#8C7567] hover:text-[#C85A17]"
               >
                 <ExternalLink className="w-3 h-3" />
@@ -142,7 +142,7 @@ export function BookCard({
                   href={`${EXPLORER_URL}/address/${book.claimer}`}
                   target="_blank"
                   rel="noreferrer"
-                  title="View on BohrScan"
+                  title="View on BotchainScan"
                   className="text-[#8C7567] hover:text-[#C85A17]"
                 >
                   <ExternalLink className="w-3 h-3" />

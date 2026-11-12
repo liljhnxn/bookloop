@@ -49,8 +49,8 @@ BookLoop operates on the principle that **information wants to circulate**. It p
                             │ RPC Calls (read / write)
                             ▼
 ┌────────────────────────────────────────────────────────┐
-│                   Botchain Testnet                     │
-│               Chain ID: 968 | Currency: BOHR           │
+│                   BOT Chain Mainnet                    │
+│               Chain ID: 677 | Currency: BOT            │
 ├────────────────────────────────────────────────────────┤
 │                   BookLoop.sol                         │
 │  - listBook(...)                                       │
@@ -105,8 +105,11 @@ enum BookStatus {
 - **Reentrancy Immunity**: No external asset transfers, native ether balances, or token interactions occur; reentrancy attack vectors are structurally non-existent.
 - **Zero Arbitrary External Calls**: The contract acts as a closed, deterministic registry.
 - **Formal Unit Testing**: 14 automated tests cover edge cases including self-claims, double claims, unauthorized withdrawals, and non-existent IDs.
-- **Verified Source Code**: Bytecode and source code are permanently verified on BohrScan:
-  `https://scan.bohr.life/address/0x37261E07640A9B2e394d44d2FF1a2100131Fd8d0#code`
+- **Verified Source Code**: Bytecode and source code are permanently verified on BOT Chain Explorer:
+  `https://scan.botchain.ai/address/0x83963800D206199e472816CCA3Fa8d5bA4C9E751#code`
+- **Official Ecosystem**:
+  - BOT Chain Website: [https://botchain.ai](https://botchain.ai)
+  - BOT Chain Explorer: [https://scan.botchain.ai](https://scan.botchain.ai)
 
 ---
 
@@ -121,8 +124,8 @@ BookLoop rejects artificial tokenization. Knowledge is a public good, and physic
 
 ## 7. Roadmap
 
-- **Phase 1 (Completed)**: Core smart contract deployment, BohrScan verification, 14 unit tests, Next.js one-page dApp, MetaMask connectivity.
-- **Phase 2**: Printable QR code bookplate bookmarks auto-generated per `bookId`, linking directly to the on-chain BohrScan provenance record.
+- **Phase 1 (Completed)**: Core smart contract deployment on BOT Chain Mainnet, BotchainScan verification, 14 unit tests, Next.js one-page dApp, MetaMask connectivity.
+- **Phase 2**: Printable QR code bookplate bookmarks auto-generated per `bookId`, linking directly to the on-chain BotchainScan provenance record.
 - **Phase 3**: Physical campus and neighborhood drop box integrations ("Little Free Library" on-chain nodes).
 - **Phase 4**: ENS & Lens Protocol social badge integration for reader recognition.
 
